@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+.overlay-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 40, 25, 0.50);
+    z-index: -1;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    color: #3d3428;
+    overflow-x: hidden;
+}
+
+.npc-portrait {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.npc-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hoja {
+    position: fixed;
+
+    font-size: 70px;
+
+    opacity: 0.12;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.hoja-1 {
+    top: 5%;
+    left: 4%;
+    transform: rotate(-25deg);
+}
+
+.hoja-2 {
+    top: 15%;
+    right: 5%;
+    transform: rotate(30deg);
+}
+
+.hoja-3 {
+    bottom: 10%;
+    left: 8%;
+    transform: rotate(20deg);
+}
+
+.hoja-4 {
+    bottom: 5%;
+    right: 10%;
+    transform: rotate(-30deg);
+}
+
+
+.inicio {
+
+    position: relative;
+    z-index: 1;
+
+    width: min(1100px, 92%);
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+
+.encabezado {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.icono-tul {
+
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.7);
+
+    border-radius: 50%;
+
+    font-size: 48px;
+
+    box-shadow:
+        0 8px 25px rgba(255, 255, 255, 0.15);
+
+    border: 3px solid rgba(91, 111, 62, 0.15);
+}
+
+
+.encabezado h1 {
+
+    font-family: 'Lora', serif;
+
+    font-size: clamp(38px, 6vw, 62px);
+
+    color: #6ba017;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+}
+
+
+.encabezado p {
+
+    font-size: 18px;
+
+    color: #ffffff;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   OPCIONES
+   ========================================= */
+
+.opciones {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 900px;
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TARJETAS
+   ========================================= */
+
+.tarjeta {
+
+    position: relative;
+
+    min-height: 300px;
+
+    padding: 35px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: rgba(255,255,255,0.82);
+
+    border: 2px solid rgba(95, 116, 64, 0.15);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(237, 238, 236, 0.12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.tarjeta::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 7px;
+
+    background: #71864c;
+}
+
+
+.tarjeta:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 50px rgba(69, 76, 48, 0.2);
+
+    border-color: rgba(95, 116, 64, 0.4);
+}
+
+
+/* =========================================
+   ICONOS
+   ========================================= */
+
+.icono-tarjeta {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 45px;
+
+    background: #edf3e7;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        inset 0 0 0 5px rgba(113,134,76,0.08);
+}
+
+
+/* =========================================
+   TEXTO TARJETAS
+   ========================================= */
+
+.contenido-tarjeta h2 {
+
+    font-family: 'Lora', serif;
+
+    font-size: 27px;
+
+    color: #4c5938;
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+}
+
+
+.contenido-tarjeta p {
+
+    max-width: 350px;
+
+    color: #766d5e;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   BOTÓN
+   ========================================= */
+
+.boton {
+
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    background: #657947;
+
+    color: white;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: background 0.3s ease;
+}
+
+
+.tarjeta:hover .boton {
+
+    background: #4d6034;
+}
+
+
+/* =========================================
+   SEGUNDA TARJETA
+   ========================================= */
+
+.tarjeta-juego::before {
+
+    background: #8b6745;
+}
+
+
+.tarjeta-juego .icono-tarjeta {
+
+    background: #f2eadc;
+}
+
+
+/* =========================================
+   MENSAJE
+   ========================================= */
+
+.mensaje {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 45px;
+
+    color: #ffffff;
+
+    font-family: 'Lora', serif;
+
+    font-size: 16px;
+
+    text-align: center;
+}
+
+
+.mensaje p {
+
+    max-width: 550px;
+
+    line-height: 1.6;
+}
+
+
+.mensaje span {
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .inicio {
+
+        padding: 35px 15px;
+    }
+
+    .opciones {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .tarjeta {
+
+        min-height: 270px;
+
+        padding: 25px;
+    }
+
+    .encabezado {
+
+        margin-bottom: 30px;
+    }
+
+    .encabezado h1 {
+
+        font-size: 40px;
+    }
+
+    .mensaje span {
+
+        display: none;
+    }
+}

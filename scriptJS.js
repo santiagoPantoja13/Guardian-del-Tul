@@ -1,5 +1,3 @@
-
-
 const MOON_PHASES = [
     { icon: '🌑', name: 'Nueva', desc: 'Descanso de la tierra.' },
     { icon: '🌓', name: 'Creciente', desc: 'Buena para sembrar hojas.' },
@@ -40,9 +38,9 @@ const PLANTS = {
         daysToGrow: 4,
         desc: 'Abre los pulmones del frío del páramo.'
     },
-    'hierbabuena': {
-        id: 'hierbabuena',
-        name: 'Hierbabuena',
+    'yerba buena': {
+        id: 'yerba buena',
+        name: 'Yerba buena',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4UbyLosjlqvHRdLAO2F8LV5b-uP2Htpi8fA&s',
         type: 'Armonía',
         daysToGrow: 2,
@@ -55,15 +53,88 @@ const PLANTS = {
         type: 'Fresco/Limpio',
         daysToGrow: 0,
         desc: 'Lista para el vientre.'
+    },
+    'alegria': {
+        id: 'alegria',
+        name: 'Alegria',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI9KvYR_L1frj9o3V5UA0lchTPx4rZZ37YrnAM8Jnx2apRyUlu0e1OlUI&s=10',
+        type: 'Topica',
+        daysToGrow: 3,
+        desc: 'Alibio pronto'
+    },
+    'papa_sidra': {
+        id: 'papa_sidra',
+        name: 'Papa sidra',
+        image: 'https://secretosparacontar.org/wp-content/uploads/2025/07/cidra.webp',
+        type: 'Fresco',
+        daysToGrow: 2,
+        desc: 'Frescura y alivio eficaz'
+    },
+    'limoncillo': {
+        id: 'limoncillo',
+        name: 'Limoncillo',
+        image: 'https://png.pngtree.com/png-vector/20250829/ourmid/pngtree-fresh-lemongrass-bundle-isolated-on-transparent-background-png-image_17325292.webp',
+        type: 'Calido',
+        daysToGrow: 3,
+        desc: 'Calido y delicioso'
+    },
+    'diente_leon': {
+        id: 'diente_leon',
+        name: 'Diente de Leon',
+        image: 'https://previews.123rf.com/images/goodstudio/goodstudio1709/goodstudio170900051/85575730-beautiful-drawing-of-dandelion-plant-with-ripe-seed-heads-or-blowballs-growing-on-green-stems-and.jpg',
+        type: 'Calido',
+        daysToGrow: 4,
+        desc: 'Calido y reconfortable'
+    },
+    'len_vaca': {
+        id: 'len_vaca',
+        name: 'Lengua de vaca',
+        image: 'https://laroussecocina.mx/wp-content/uploads/2018/01/Lengua-de-vaca.jpg',
+        type: 'Reconfortable',
+        daysToGrow: 1,
+        desc: 'Reconfortable y eficaz'
+    },
+    'tomillo': {
+        id: 'tomillo',
+        name: 'Tomillo',
+        image: 'https://img.magnific.com/vector-premium/ilustracion-vector-dibujos-animados-planta-verde-tomillo_87720-8686.jpg',
+        type: 'Topica',
+        daysToGrow: 2,
+        desc: 'Oloroso'
+    },
+    'calendula': {
+        id: 'calendula',
+        name: 'Calendula',
+        image: 'https://static.vecteezy.com/system/resources/previews/028/293/732/non_2x/calendula-flower-line-drawing-floral-design-elements-isolated-on-white-background-illustration-ingredient-for-herbal-tea-medicinal-cosmetic-preparations-vector.jpg',
+        type: 'Calor',
+        daysToGrow: 2,
+        desc: 'Da calor a los huesos y al espíritu.'
+    },
+    'menta': {
+        id: 'menta',
+        name: 'Menta',
+        image: 'https://i.pinimg.com/474x/61/b6/54/61b65459faac5fa07cde924b2bbf5bd8.jpg',
+        type: 'Fresco',
+        daysToGrow: 4,
+        desc: 'Frescura y alivio eficaz'
     }
+    
 };
 
 const QUESTS = [
-    { id: 1, text: "Hijo, una niña de la vereda tiene un coraje atrapado en el estómago, no puede dormir de los cólicos. ¿Qué planta suave y fresca le damos para armonizar su vientre?", correct: 'hierbabuena', success: "¡Perfecto! La hierbabuena relajará su espíritu y su vientre. (+10 Respeto)", fail: "No... esa planta es muy fuerte para una niña o no es para el vientre." },
-    { id: 2, text: "Ha bajado un comunero del páramo. Sus pulmones están llenos de frío y neblina, le cuesta respirar. Necesitamos la planta de la montaña.", correct: 'eucalipto', success: "Bien hecho. Las vaporizaciones de eucalipto sacarán el frío de su pecho. (+10 Respeto)", fail: "Esta medicina no actúa en los pulmones ni saca este frío profundo." },
-    { id: 3, text: "Hubo un susto grande en la casa de la vecina. Hay mucha pesadez y energías oscuras rondando. Necesito una planta para hacer un despojo fuerte.", correct: 'ruda', success: "La ruda espantará las malas energías y protegerá el hogar. Excelente. (+15 Respeto)", fail: "Esa planta no tiene la fuerza espiritual para expulsar la desarmonía." },
-    { id: 4, text: "Un agricultor se mojó en el aguacero y ahora sus articulaciones y huesos están congelados del dolor. Necesita recuperar el calor.", correct: 'romero', success: "Con este romero haremos fricciones para devolverle el calor corporal. (+10 Respeto)", fail: "Eso es medicina de fresco, ¡le darás más frío a sus huesos!" },
-    { id: 5, text: "He comido pesado y siento una gastritis ardiendo. Necesito limpiar mi organismo, pero recuerda que el remedio no debe ser amargo o tóxico.", correct: 'sabila_lista', success: "Al desangrar la sábila, le quitamos lo tóxico. Ahora es un remedio bondadoso que limpiará mi vientre. (+15 Respeto)", fail: "Mmm, si me das sábila cruda me irritará más por su resina amarga, u otra planta no me servirá aquí." }
+    { id: 1, text: "Hijo, una niña de la vereda tiene un coraje atrapado en el estómago, no puede dormir de los cólicos. ¿Qué planta suave y fresca le damos para armonizar su vientre?", correct: ['yerba buena','diente_leon','limoncillo'], reward: 10, success: "¡Perfecto! La yerba buena relajará su espíritu y su vientre. (+10 Respeto)", fail: "No... esa planta es muy fuerte para una niña o no es para el vientre." },
+    { id: 2, text: "Ha bajado un comunero del páramo. Sus pulmones están llenos de frío y neblina, le cuesta respirar. Necesitamos la planta de la montaña.", correct: ['eucalipto'], reward: 10, success: "Bien hecho. Las vaporizaciones de eucalipto sacarán el frío de su pecho. (+10 Respeto)", fail: "Esta medicina no actúa en los pulmones ni saca este frío profundo." },
+    { id: 3, text: "Hubo un susto grande en la casa de la vecina. Hay mucha pesadez y energías oscuras rondando. Necesito una planta para hacer un despojo fuerte.", correct: ['ruda'], reward: 15, success: "La ruda espantará las malas energías y protegerá el hogar. Excelente. (+15 Respeto)", fail: "Esa planta no tiene la fuerza espiritual para expulsar la desarmonía." },
+    { id: 4, text: "Un agricultor se quemo haciendo el almuerzo. Necesito necesito una planta fresca que me ayude a sanar la piel afectada. Recuerda que el remedio no debe ser tóxico.", correct: ['sabila_lista'], reward: 15, success: "Al desangrar la sábila, le quitamos lo tóxico. Ahora es un remedio bondadoso que limpiará mi vientre. (+15 Respeto)", fail: "Mmm, si me das sábila cruda me irritará más por su resina amarga, u otra planta no me servirá aquí." },
+    { id: 5, text: "Estuve trabajando todo el día bajo la lluvia, ora sus articulaciones y huesos están congelados del dolor. Necesita recuperar el calor.", correct: ['romero'], reward: 10, success: "Con este romero haremos fricciones para devolverle el calor corporal. (+10 Respeto)", fail: "Eso es medicina de fresco, ¡le darás más frío a sus huesos!" },
+    { id: 6, text: "He comido pesado y siento una gastritis arolvide llevar sombrero y ahora tengo irritada la piel, Necesito una planta que me alivie la irritación", correct: ['alegria'], reward: 15, success: "¡Excelente! La alegría funciona como un tópico para la piel (+15 Respeto)", fail: "No... Ten mas cuidado, es planta no es la que necesitamos." },
+    { id: 7, text: "El hijo del gobernador ha escondidas se ha comido la panela a escondidas, ahora tiene un fuerte dolor de estomago por los paracitos, necesitas darle algo fresco para tratarlo.", correct: ['papa_sidra'], reward: 20, success: "¡Muy bien! El hijo del gobernador ahora estará mejor, debe dejar de comer dulces. (+20 Respeto)", fail: "Esa planta no ayuda con el dolor de estomago..." },
+    { id: 8, text: "Amaneció muy frio el día, hay estudiantes que presentan dolor de estomago, dame una planta para tratar el mal.", correct: ['limoncillo','yerba buena','diente_leon'], reward: 10, success: "Es perfecto, una aromática de limoncillo aliviará el dolor de los estudiantes. (+10 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el dolor de estomago generado por el frio." },
+    { id: 9, text: "Hijo, una joven esta con cólicos menstruales, ¿Qué planta suave pero efectiva le darías?", correct: ['diente_leon','yerba buena', 'limoncillo'], reward: 10, success: "Muy buena decisión, el Te de diente de león, será excelente para tratar su dolor. (+10 Respeto)", fail: "Ten cuidado al medicar plantas, la que seleccionaste, no es la ideal" },
+    { id: 10, text: "Un comunero estaba participando en un torneo de futbol, tuvo un fuerte choque en el tobillo y ahora esta infamado. ¿Qué planta le podemos dar para bajar la hinchazón? ", correct: ['len_vaca','calendula'], reward: 13, success: "Muy bien, esa planta es excelente para tratar los golpes. (+13 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el dolor de estomago generado por el frio." },
+    { id: 11, text: "Tengo a una comunera embarazada que presenta un frio bajo, ¿Que planta me sirve para repeler el frio de la comunera embarazada?", correct: ['tomillo'], reward: 5, success: "Muy buena elección, con esta planta repeleremos el frio de nuestra comunera. (+5 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el frio de las hembrazadas" },
+    { id: 12, text: "Hay una planta fuerte para tratar las heridas, me he hecho una herida después de terminar un ritual. ¿Qué planta es la que necesito?", correct: ['calendula'], reward: 20, success: ". (+20 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el" },
+    { id: 13, text: "Mi hija presenta una fuerte tos, dame una planta que la ayude a tratar este problema.", correct: ['menta'], reward: 8, success: ". (+8 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el" },
 ];
 
 let state = {
@@ -72,7 +143,9 @@ let state = {
     respect: 0,
     selectedSeed: null,
     garden: Array(6).fill(null).map(() => ({ plantId: null, age: 0 })),
-    inventory: { 'romero': 0, 'ruda': 0, 'sabila_cruda': 0, 'eucalipto': 0, 'hierbabuena': 0, 'sabila_lista': 0 },
+    inventory: { 'romero': 0, 'ruda': 0, 'sabila_cruda': 0, 'eucalipto': 0, 'yerba buena': 0, 
+        'sabila_lista': 0, 'alegria': 0, 'papa_sidra':0, 'limoncillo':0, 
+        'diente_leon':0,'len_vaca':0,'tomillo':0, 'calendula':0, 'menta':0 },
     currentQuest: null,
     questDelay: false,
     sabilaProcesando: 0
@@ -114,7 +187,10 @@ function initGame() {
 
 function renderSeeds() {
     DOM.seeds.innerHTML = '';
-    ['romero', 'ruda', 'sabila_cruda', 'eucalipto', 'hierbabuena'].forEach(id => {
+    ['romero', 'ruda', 'sabila_cruda', 
+        'eucalipto', 'yerba buena', 'alegria',
+        'papa_sidra','limoncillo','diente_leon',
+        'len_vaca','tomillo','calendula','menta'].forEach(id => {
         const p = PLANTS[id];
         const btn = document.createElement('button');
         btn.className = 'seed-btn';
@@ -264,9 +340,9 @@ function assignNewQuest() {
 function tryDeliverQuest(plantId) {
     if (!state.currentQuest || state.questDelay) return;
 
-    if (state.currentQuest.correct === plantId) {
+    if (state.currentQuest.correct.includes(plantId)) {
         state.inventory[plantId]--;
-        state.respect += (plantId === 'ruda' || plantId === 'sabila_lista') ? 15 : 10;
+        state.respect += state.currentQuest.reward;
         DOM.dialogue.innerHTML = `<span style="color: green; font-weight: bold;">${state.currentQuest.success}</span><br><br><i>El The' Wala se ha ido a curar al paciente. Volverá mañana con otro caso.</i>`;
         state.currentQuest = null;
         state.questDelay = true;
@@ -289,3 +365,9 @@ function closeModal() {
 }
 
 initGame();
+
+document.getElementById('seed-selector').addEventListener('wheel', (e) => {
+    if (e.deltaY === 0) return;
+    e.preventDefault();
+    e.currentTarget.scrollLeft += e.deltaY;
+});

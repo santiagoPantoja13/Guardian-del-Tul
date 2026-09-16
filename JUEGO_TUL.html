@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Guardián del Tul - Sabiduría Nasa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -14,6 +16,9 @@
 
     <div class="game-container">
         <div class="header">
+            <a href="index.html" class="btn-inicio">
+                ← Inicio
+            </a>
             <h1>🌱 El Guardián del Tul</h1>
             <div class="stats">
                 <div>Día: <span id="ui-day">1</span></div>
@@ -26,33 +31,44 @@
 
         <div class="garden-area">
             <h2 style="margin-top:0; font-family: 'Lora', serif; color: var(--accent-brown);">Tu Tul (Huerta)</h2>
-            <p style="text-align: center; margin: 0; font-size: 14px; max-width: 400px;">Selecciona una semilla abajo y haz clic en la tierra para sembrar. Cosecha cuando la planta esté lista.</p>
+            <p style="text-align: center; margin: 0; font-size: 14px; max-width: 400px;">Selecciona una semilla abajo y
+                haz clic en la tierra para sembrar. Cosecha cuando la planta esté lista.</p>
             <div class="garden-grid" id="garden-grid"></div>
         </div>
 
         <div class="npc-area">
             <div class="npc-portrait">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST5EyDtfjaYjb4PuL-u-eauq7BB9LBz3Ch8g&s" alt="The' Wala">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/mayor2.mp4" type="video/mp4">
+                </video>
             </div>
-            <h3 style="text-align: center; margin: 0; color: var(--accent-brown); font-family: 'Lora', serif;">The' Wala</h3>
+            <h3 style="text-align: center; margin: 0; color: var(--accent-brown); font-family: 'Lora', serif;">The' Wala
+            </h3>
             <div class="dialogue-box" id="dialogue-box">
-                "Bienvenido joven. La Uma Kiwe (Madre Tierra) necesita equilibrio. Siembra y cuida las plantas sagradas. Yo vendré a buscar medicina para nuestra gente."
+                "Bienvenido joven. La Uma Kiwe (Madre Tierra) necesita equilibrio. Siembra y cuida las plantas sagradas.
+                Yo vendré a buscar medicina para nuestra gente."
             </div>
             <div style="font-size: 12px; margin-top: 10px; text-align: center;">
                 <i>Haz clic en la medicina correcta de tu inventario para dársela al The' Wala.</i>
             </div>
-            <button id="btn-desangrar" class="action-btn" style="display: none; margin-top: auto; background-color: #81c784; color: black;">💧 Desangrar Sábila (1 día)</button>
+            <button id="btn-desangrar" class="action-btn"
+                style="display: none; margin-top: auto; background-color: #81c784; color: black;">💧 Desangrar Sábila (1
+                día)</button>
         </div>
 
         <div class="controls">
             <div class="seed-selector" id="seed-selector"></div>
 
-            <div class="inventory">
-                <span style="font-size: 14px; color: #bcaaa4;">Morral:</span>
-                <div id="inventory-list" style="display: flex; gap: 5px; flex-wrap: wrap;"></div>
-            </div>
+            <div class="footer-actions">
+                <div class="footer-actions"> 
 
-            <button class="btn-end-day" onclick="nextDay()">Terminar Día 🌙</button>
+                    <div class="inventory">
+                        <span style="font-size: 14px; color: #bcaaa4;">Morral:</span>
+                        <div id="inventory-list" style="display: flex; gap: 5px; flex-wrap: wrap;"></div>
+                    </div>
+                </div>
+                <button class="btn-end-day" onclick="nextDay()">Terminar Día 🌙</button>
+            </div>
         </div>
     </div>
 

@@ -1,0 +1,361 @@
+/* =========================================
+   BIBLIOTECA AUDIOVISUAL
+   ========================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 40, 25, 0.50);
+    z-index: -1;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    color: #3d3428;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   CONTENEDOR
+   ========================================= */
+
+.biblioteca {
+
+    width: min(1200px, 94%);
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 35px 20px 40px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   VOLVER
+   ========================================= */
+
+.volver {
+
+    align-self: flex-start;
+
+    text-decoration: none;
+
+    color: #56683c;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(86, 104, 60, 0.2);
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.volver:hover {
+
+    background: #56683c;
+
+    color: white;
+
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   TITULO
+   ========================================= */
+
+.titulo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.icono-biblioteca {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.icono-biblioteca img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.titulo h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(34px, 5vw, 52px);
+    color: #6ba017;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+/* =========================================
+   CARRUSEL
+   ========================================= */
+
+.contenedor-carrusel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* =========================================
+   ÁREA DEL CARRUSEL
+   ========================================= */
+
+.carrusel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 5px 20px;
+}
+
+
+/* =========================================
+   TARJETA VIDEO
+   ========================================= */
+
+.video-card {
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(91, 108, 65, 0.12);
+    box-shadow: 0 12px 35px rgba(70, 80, 50, 0.13);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-7px);
+    box-shadow:
+        0 20px 40px rgba(70, 80, 50, 0.20);
+}
+
+
+/* =========================================
+   VIDEO
+   ========================================= */
+
+.video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #20251c;
+    overflow: hidden;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   TEXTO VIDEO
+   ========================================= */
+.video-card h2 {
+    font-family: 'Lora', serif;
+    font-size: 23px;
+    color: #4e5f38;
+    padding: 18px 20px 3px;
+}
+
+.video-card p {
+    color: #897e6d;
+    padding: 0 20px 20px;
+    font-size: 14px;
+}
+
+/* =========================================
+   FLECHAS
+   ========================================= */
+.flecha {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: #637947;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(70, 80, 50, 0.2);
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+.flecha:hover {
+    background: #4d6034;
+    transform: scale(1.08);
+}
+
+.flecha:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================================
+   INDICADORES
+   ========================================= */
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.indicador {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #bdc7ae;
+    transition: 0.3s;
+}
+
+.indicador.activo {
+    width: 25px;
+    border-radius: 10px;
+    background: #d8dad6;
+}
+
+
+/*MENSAJE */
+
+.mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    margin-top: 40px;
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+}
+
+.mensaje p {
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/*FOOTER */
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 35px;
+    color: #fffefd;
+    font-size: 13px;
+}
+
+/*TABLET */
+
+@media (max-width: 900px) {
+
+    .carrusel {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* CELULAR*/
+
+@media (max-width: 650px) {
+    .biblioteca {
+        padding: 25px 12px 30px;
+    }
+
+    .contenedor-carrusel {
+        gap: 7px;
+    }
+
+    .carrusel {
+        grid-template-columns: 1fr;
+        padding: 5px 2px 15px;
+    }
+
+    .video-card {
+        display: none;
+    }
+
+    .video-card:first-child {
+        display: block;
+    }
+
+    .flecha {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .titulo {
+        margin-bottom: 25px;
+    }
+
+    .titulo h1 {
+        font-size: 34px;
+    }
+
+    .mensaje span {
+        display: none;
+    }
+}

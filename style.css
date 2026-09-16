@@ -128,16 +128,16 @@ body {
 .npc-portrait {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  /*border-radius: 50%; */
   overflow: hidden;
   margin: 0 auto;
 }
 
-.npc-portrait img {
+.npc-portrait img,
+.npc-portrait video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .dialogue-box {
@@ -168,15 +168,38 @@ body {
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 15px;
+  align-items: stretch;
   flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 .seed-selector {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+#seed-selector {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  /* deja el que ya tengas si es distinto */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  min-width: 0;
+  /* importante, ver nota abajo */
+  padding-bottom: 6px;
 }
 
 .seed-btn,
@@ -347,4 +370,53 @@ body {
 
 .seed-btn:hover .tooltip {
   opacity: 1;
+}
+
+/* =========================================
+   BOTÓN REGRESAR AL INICIO
+   ========================================= */
+
+.btn-inicio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  background: #657947;
+
+  padding: 9px 18px;
+
+  border-radius: 25px;
+
+  font-family: 'Nunito', sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  margin-bottom: 10px;
+}
+
+
+.btn-inicio:hover {
+  background: #4d6034;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-inicio:active {
+  transform: translateY(0);
 }
