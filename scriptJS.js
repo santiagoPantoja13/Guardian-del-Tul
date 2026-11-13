@@ -134,7 +134,7 @@ const QUESTS = [
     { id: 10, text: "Un comunero estaba participando en un torneo de futbol, tuvo un fuerte choque en el tobillo y ahora esta infamado. ¿Qué planta le podemos dar para bajar la hinchazón? ", correct: ['len_vaca','calendula'], reward: 13, success: "Muy bien, esa planta es excelente para tratar los golpes. (+13 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el dolor de estomago generado por el frio." },
     { id: 11, text: "Tengo a una comunera embarazada que presenta un frio bajo, ¿Que planta me sirve para repeler el frio de la comunera embarazada?", correct: ['tomillo'], reward: 5, success: "Muy buena elección, con esta planta repeleremos el frio de nuestra comunera. (+5 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el frio de las hembrazadas" },
     { id: 12, text: "Hay una planta fuerte para tratar las heridas, me he hecho una herida después de terminar un ritual. ¿Qué planta es la que necesito?", correct: ['calendula'], reward: 20, success: "Muy bien, esa planta es excelente para esos males. (+20 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el" },
-    { id: 13, text: "Mi hija presenta una fuerte tos, dame una planta que la ayude a tratar este problema.", correct: ['menta'], reward: 8, success: "Muy bien, esa planta es excelente para la tos. (+8 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar el" },
+    { id: 13, text: "Mi hija presenta una fuerte tos, dame una planta que la ayude a tratar este problema.", correct: ['menta'], reward: 8, success: "Muy bien, esa planta es excelente para la tos. (+8 Respeto)", fail: "Ten cuidado, esa planta no es la ideal para tratar la tos..." },
 ];
 
 let state = {
